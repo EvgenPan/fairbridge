@@ -1,0 +1,117 @@
+/*INSTAFEED*/
+#sb_instagram{
+  padding-bottom: 0!important;
+}
+
+/*Temolate Page-Top*/
+.top_section-page{
+  background-color: $indigo-blue;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  .subtitle{
+    color:$white;
+    max-width: 600px;
+  }
+  .content_hero{
+    h1{
+      max-width: 750px;
+      color: $white;
+    }
+  }
+}
+/*REVERSE SECTION ON 768px*/
+.r-reverse{
+  flex-direction: column-reverse;
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+  }
+}
+/*ADD BORDER */
+.border_full{
+  border: 1px solid;
+}
+.section-border{
+  border-bottom: 1px solid $indigo-blue;
+  border-top: 1px solid $indigo-blue;
+}
+.no_pt-fill .vc_row-has-fill>.vc_column_container>.vc_column-inner{
+  padding-top: 0;
+}
+/*SLICK*/
+.slick-dots {
+  text-align: center;
+  display: flex; // поставить кнопки в ряд
+  justify-content: center; // выровнять по центру
+  list-style: none; // убираем черные маркеры
+  margin-top: 30px;
+  @include _media-xs-down(){
+    margin-top: 20px;
+  }
+}
+
+.slick-dots button {
+  background: #007DA6; // цвет фона
+  border: none; // без рамки
+  height: 3px; // высота точки
+  width:40px; // ширина точки
+  margin: 5px; // отступы между точками
+  outline: none; // убираем обводку
+  font-size: 0;
+  opacity: 0.5;
+  @include _media-xs-down(){
+    width:22px;
+  }
+}
+.slick-dots button:focus{
+  background: #007DA6!important;
+  opacity: 1;
+}
+.slick-dots li[class="slick-active"] button {
+  background: #007DA6;
+  opacity: 1;
+}
+.slider_blog {
+  position: relative;
+}
+
+.slider_blog .slick-arrow{
+  position: absolute;
+  top: 40%;
+  z-index: 2;
+  font-size: 0;
+  width: 15px;
+  height: 42px;
+  transform: translateY(-50%);
+  border: none;
+
+}
+.slider_blog .slick-arrow.slick-prev{
+  left: -50px; // левая стрелка остается с левой стороны слайдера
+  background: url('/wp-content/uploads/2022/10/angle-left.svg') 0 0 / 100% no-repeat;
+  transition: opacity 0.25s ease-in-out;
+  @media screen and (max-width: 820px){
+    left: -35px;
+  }
+  &:hover{
+    opacity: 0.6;
+  }
+}
+
+.slider_blog .slick-arrow.slick-next{
+  right: -50px; // правая стрелка переместилась справа от слайдера
+  background: url('/wp-content/uploads/2022/10/angle-right.svg') 0 0 / 100% no-repeat;
+  transition: opacity 0.25s ease-in-out;
+  @media screen and (max-width: 820px){
+    right: -35px;
+  }
+  &:hover{
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,18 @@
+/*
+Theme Name: Starting Theme
+Version: 1.0.0
+Author: paspartoo.com Web Agency
+*/
+@import "css/style.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@600;700;800&display=swap');
+@font-face {
+    font-family: 'Hanson Bold';
+    src: url('fonts/HansonBold.eot');
+    src: url('fonts/HansonBold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/HansonBold.woff2') format('woff2'),
+    url('fonts/HansonBold.woff') format('woff'),
+    url('fonts/HansonBold.ttf') format('truetype'),
+    url('fonts/HansonBold.svg#SouthCoast') format('svg');
+    font-style: normal;
+    font-display: swap;
+}
